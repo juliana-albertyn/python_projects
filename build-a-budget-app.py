@@ -85,7 +85,7 @@ class Category:
             self.ledger.append({key_amount: amount, key_description: description})
 
     def withdraw(self, amount: float, description: str = "") -> bool:
-        """Withdrawal transaction.
+        """ Withdrawal transaction.
 
         Args:
         amount (float): Amount to withdraw.
