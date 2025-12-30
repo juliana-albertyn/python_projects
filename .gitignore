@@ -1,0 +1,76 @@
+# -------------------------
+# Python build artefacts
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+
+
+# -------------------------
+# IDE / editor settings
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Testing / coverage
+# -------------------------
+.coverage
+htmlcov/
+.pytest_cache/
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+
+# -------------------------
+# Jupyter / notebooks
+# -------------------------
+.ipynb_checkpoints/
+*.ipynb
+
+# -------------------------
+# Data science artefacts
+# -------------------------
+# Raw datasets (CSV, Excel, etc.)
+*.csv
+*.tsv
+*.xls
+*.xlsx
+
+# Large binary data
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.pkl
+*.joblib
+
+# Model files
+*.model
+*.ckpt
+*.pt
+*.pth
+
+# -------------------------
+# Local experiments or data
+# -------------------------
+wip.py
+
+# -------------------------
+# Exceptions (curated datasets you DO want tracked)
+# -------------------------
+# !fynbyte/fynbyte_data/ahs_surveillance/raw/ahs_cases.csv
