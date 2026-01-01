@@ -13,10 +13,11 @@ This repository showcases practical applications of Python, ranging from beginne
 
 ## 📂 Project Index
 
-| Project Name           | Source        | Description                                                                 |
-|------------------------|---------------|-----------------------------------------------------------------------------|
-| User Configuration App | freeCodeCamp  | Manipulates a dictionary of user configurations.                            |
-| Budget App             | freeCodeCamp  | Tracks spending in categories and generates a spend chart.                  |
+| Project Name            | Source        | Description                                                                 |
+|-------------------------|---------------|-----------------------------------------------------------------------------|
+| User Configuration App  | freeCodeCamp  | Manipulates a dictionary of user configurations.                            |
+| Budget App              | freeCodeCamp  | Tracks spending in categories and generates a spend chart.                  |
+| Polygon Area Calculator | freeCodeCamp  | Defines Rectangle and Square classes,  with methods for geometric calculations and ASCII rendering.                  |
 
 ---
 
