@@ -28,7 +28,7 @@
 
 ---
 
-### ⚖️ Why This Project Matters
+### Why This Project Matters
 - Reinforces linked list traversal and pointer manipulation.  
 - Shows how abstract data types (queue) can be implemented differently depending on the underlying structure.  
 - Demonstrates how design choices affect time complexity.

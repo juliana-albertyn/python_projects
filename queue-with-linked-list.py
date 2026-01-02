@@ -3,6 +3,10 @@ Project 2 (Intermediate Level): Queue Using a Linked List
 
 Implement a queue using a linked list
 """
+__author__ = "Juliana Albertyn"
+__email__ = "julie_albertyn@yahoo.com"
+__status__ = "development"  # or testing or production
+__date__ = "2026-01-02"
 
 from typing import Any, Optional
 
