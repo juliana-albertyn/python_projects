@@ -17,9 +17,9 @@ class Node:
     previous elements in the queue.
 
     Attributes:
-    element(Any): the data stored in the node
-    next(Optional[Node]): a pointer to the next node
-    prev(Optional[Node]): a pointer to the previous node
+    element(Any): the data stored in the node.
+    next(Optional[Node]): a pointer to the next node.
+    prev(Optional[Node]): a pointer to the previous node.
     """
 
     def __init__(self, element: Any) -> None:
@@ -36,7 +36,7 @@ class Queue:
     Attributes
     head (Optional[Node]): the first node in the queue.
     tail (Optional[Node]): the last node in the queue.
-    length (int): the number of nodes in the queue
+    length (int): the number of nodes in the queue.
     """
 
     def __init__(self) -> None:
