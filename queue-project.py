@@ -1,59 +1,74 @@
 """
-Co-Pilot prompt
-Project 1 (Beginner Level): **Implement a Queue using a List**
-Concepts reinforced: arrays/lists, abstract data type (queue), FIFO behavior, Big‑O reasoning.
+Implementation a Queue using a List
+"""
 
-1. Create a `Queue` class with the following methods:
-   - `enqueue(element)` → adds an element to the back of the queue.
-   - `dequeue()` → removes and returns the front element.
-   - `is_empty()` → returns `True` if the queue is empty.
-   - `peek()` → returns the front element without removing it.
-2. Internally, use a Python list to store the elements.
-3. Demonstrate the queue by enqueuing a few items, dequeuing them, and printing results.
-4. Add a short comment in your code explaining the **time complexity** of each operation (`O(1)` or `O(n)` depending on how you implement it).
-#"""
-
+from typing import Any
 from collections import deque
 
+
 class Queue:
-    def __init__(self):
-        self.queue_items = []
+    """
+    A queue class using a list to store elements
+    """
 
-    def enqueue(self, element):
-        self.queue_items.append(element) # O(1)
+    def __init__(self) -> None:
+        """
+        Initialises an instance of the queue class
 
-    def dequeue(self):
+        Attributes:
+        queue_items (list[Any]) : contains the queue items
+        """
+        self.queue_items = [Any]
+
+    def enqueue(self, element: Any) -> None:
+        """Add an element to the back of the list"""
+        self.queue_items.append(element)  # O(1)
+
+    def dequeue(self) -> Any:
+        """Remove an element from the front of the list and returns it"""
         if len(self.queue_items) == 0:
             raise ValueError("Queue is empty")
-        return self.queue_items.pop(0) # O(n)
+        return self.queue_items.pop(0)  # O(n)
 
-    def is_empty(self):
-        return len(self.queue_items) == 0 # O(1)
+    def is_empty(self) -> bool:
+        """Returns True is the queue is empty, else returns False"""
+        return len(self.queue_items) == 0  # O(1)
 
-    def peek(self):
+    def peek(self) -> Any:
+        """Returns the first item in the list, without removing it"""
         if len(self.queue_items) == 0:
             raise ValueError("Queue is empty")
-        return self.queue_items[0] # O(1) 
-    
+        return self.queue_items[0]  # O(1)
+
+
 class ImprovedQueue:
-    def __init__(self):
-        self.queue_items = deque() # --> improvement
+    """
+    A queue class using a deque to store elements
+    """
 
-    def enqueue(self, element):
-        self.queue_items.append(element) # O(1)
+    def __init__(self) -> None:
+        """Initialise an instance of the queue class"""
+        self.queue_items = deque()  # --> improvement
 
-    def dequeue(self):
+    def enqueue(self, element : Any) -> None:
+        """Add an element to the back of the list"""
+        self.queue_items.append(element)  # O(1)
+
+    def dequeue(self) -> Any:
+        """Remove an element from the front of the list and returns it"""
         if len(self.queue_items) == 0:
             raise ValueError("Queue is empty")
-        return self.queue_items.popleft() # O(1) --> improvement
+        return self.queue_items.popleft()  # O(1) --> improvement
 
-    def is_empty(self):
-        return len(self.queue_items) == 0 # O(1)
+    def is_empty(self) -> bool:
+        """Returns True is the queue is empty, else returns False"""
+        return len(self.queue_items) == 0  # O(1)
 
-    def peek(self):
+    def peek(self) -> Any:
+        """Returns the first item in the list, without removing it"""
         if len(self.queue_items) == 0:
             raise ValueError("Queue is empty")
-        return self.queue_items[0] # O(1)
+        return self.queue_items[0]  # O(1)
 
 
 q = Queue()
@@ -84,4 +99,4 @@ try:
     print(q.dequeue())
     print(q.dequeue())
 except ValueError as e:
-    print(e)    
+    print(e)
