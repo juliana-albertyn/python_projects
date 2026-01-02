@@ -19,7 +19,8 @@ This repository showcases practical applications of Python, ranging from beginne
 | Budget App              | freeCodeCamp  | Tracks spending in categories and generates a spend chart.                  |
 | Polygon Area Calculator | freeCodeCamp  | Defines Rectangle and Square classes,  with methods for geometric calculations and ASCII rendering.                  |
 | Queue Project           | Microsoft Copilot  | Implement a queue using a list.                            |
-| Queue With Linked List  | Microsoft Copilot  | Implement a queue using a linked list.                            |
+| Queue with linked list  | Microsoft Copilot  | Implement a queue using a linked list.                            |
+| Queue With doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list |
 
 ---
 
