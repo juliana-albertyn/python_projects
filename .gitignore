@@ -68,9 +68,8 @@ htmlcov/
 # -------------------------
 # Local experiments or data
 # -------------------------
-wip.py
+
 
 # -------------------------
 # Exceptions (curated datasets you DO want tracked)
 # -------------------------
-# !fynbyte/fynbyte_data/ahs_surveillance/raw/ahs_cases.csv
