@@ -10,13 +10,14 @@ __date__ = "2026-01-02"
 
 from typing import Any
 
+
 class Queue:
     """
     A circular queue.
 
     Attributes
     queue_items (list[Any]) : the list containing the elements.
-    capacity (int) : the maximnum number of elements allowed.
+    capacity (int) : the maximum number of elements allowed.
     head (int) : the index of the front element.
     tail (int) : the index where the next element will be inserted.
     length (int) : the number of elements.
@@ -24,7 +25,7 @@ class Queue:
 
     def __init__(self, capacity: int) -> None:
         """Initialise an instance of Queue."""
-        self._queue_items : list[Any] = []
+        self._queue_items: list[Any] = [None] * capacity
         self._capacity = capacity
         self._head = 0
         self._tail = 0
@@ -38,25 +39,23 @@ class Queue:
         """Add an element at the tail."""
         if len(self) == self._capacity:
             raise OverflowError("Queue is full")
-        self._queue_items.append(element)
+        self._queue_items[self._tail] = element
         self._tail = (self._tail + 1) % self._capacity
         self._length += 1
 
     def dequeue(self) -> Any:
         """Remove the element at the head."""
-        if len(self._queue_items) == 0:
+        if self._length == 0:
             raise ValueError("Queue is empty")
-        if self._queue_items[self._head] is None:
-            raise RuntimeError("Head should never be None here")
         item = self._queue_items[self._head]
-        self._queue_items.pop(self._head)
-        self._head = (self._head) % self._capacity
+        self._queue_items[self._head] = None
+        self._head = (self._head + 1) % self._capacity
         self._length -= 1
         return item
 
     def peek(self) -> Any:
-        """Return the element at the head without removng it."""
-        if len(self._queue_items) == 0:
+        """Return the element at the head without removing it."""
+        if self._length == 0:
             raise ValueError("Queue is empty")
         return self._queue_items[self._head]
 
@@ -68,6 +67,7 @@ class Queue:
         """Returns True if the list is filled to capacity, else returns False."""
         return self._length == self._capacity
 
+
 # create and check empty
 q = Queue(5)
 print(f"Empty?: {q.is_empty()}")
@@ -75,7 +75,9 @@ print(f"Empty?: {q.is_empty()}")
 try:
     for item in range(101, 106):
         q.enqueue(item)
-        print(f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
+        print(
+            f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
+        )
 except ValueError as e:
     print(e)
 except RuntimeError as e:
@@ -85,22 +87,28 @@ print(f"Full?: {q.is_full()}")
 try:
     for item in range(106, 108):
         q.enqueue(item)
-        print(f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
+        print(
+            f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
+        )
 except ValueError as e:
     print(e)
 except RuntimeError as e:
     print(e)
 except OverflowError as e:
-    print(e)  
+    print(e)
 
 try:
-# dequeue 3   
+    # dequeue 3
     for i in range(0, 3):
-        print(f"Dequeue: {q.dequeue()} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
-# enqueue 2        
-    for item in range(201, 203)    :
+        print(
+            f"Dequeue: {q.dequeue()} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
+        )
+    # enqueue 2
+    for item in range(201, 203):
         q.enqueue(item)
-        print(f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
+        print(
+            f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
+        )
     print(f"Full?: {q.is_full()}")
     print(f"Empty?: {q.is_empty()}")
 
