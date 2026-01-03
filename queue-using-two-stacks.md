@@ -1,8 +1,4 @@
-Perfect — let’s move on to **Project 3**. This one is a classic exercise that deepens your understanding of how abstract data types can be implemented in different ways.
-
----
-
-## Project 3 (Intermediate–Advanced): **Queue Using Two Stacks**
+# Project 3 (Intermediate–Advanced): Queue Using Two Stacks
 
 ### Goal
 Implement a **Queue** using **two Stack objects**. This demonstrates how you can simulate FIFO behavior (queue) using LIFO structures (stacks).

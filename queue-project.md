@@ -1,4 +1,4 @@
-## Project 1 (Beginner Level): **Implement a Queue using a List**
+# Project 1 (Beginner Level): Implement a Queue using a List
 **Concepts reinforced:** arrays/lists, abstract data type (queue), FIFO behavior, Big‑O reasoning.
 
 ### Requirements

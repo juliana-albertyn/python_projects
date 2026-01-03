@@ -1,6 +1,6 @@
 
 
-## Project 4: Doubly Linked List Queue (or Circular Queue)
+# Project 4: Doubly Linked List Queue (or Circular Queue)
 
 ### Goal  
 Implement a **Queue** using a **doubly linked list** (or alternatively, a circular queue). This builds on your linked list knowledge and introduces bidirectional pointers.
@@ -42,3 +42,4 @@ Implement a **Queue** using a **doubly linked list** (or alternatively, a circul
 - Shows how design choices (single vs double links) affect flexibility and efficiency.
 
 ---
+*Project concept suggested by Microsoft Copilot.*

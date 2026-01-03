@@ -46,7 +46,7 @@ python project_name.py
 
 ## 📝 Translation Setup
 
-This project uses **GNU gettext** for internationalisation (i18n).  
+Some of these projec use **GNU gettext** for internationalisation (i18n).  
 Python’s `gettext` module is part of the standard library, so no extra Python package is needed.  
 However, you must install the **gettext command‑line tools** (`xgettext`, `msgfmt`, `msgmerge`) to extract and compile translations.
 

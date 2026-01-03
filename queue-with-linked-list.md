@@ -1,4 +1,4 @@
-## Project 2 (Intermediate Level): **Queue Using a Linked List**
+# Project 2 (Intermediate Level): Queue Using a Linked List
 
 ### Requirements
 1. **Node class**  

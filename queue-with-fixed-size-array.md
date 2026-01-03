@@ -1,5 +1,5 @@
-## Project 5: Circular Queue (using a fixed-size array)
-This one introduces modular arithmetic and buffer management, which are key concepts for efficient data structures.
+# Project 5: Circular Queue (using a fixed-size array)
+This introduces modular arithmetic and buffer management, which are key concepts for efficient data structures.
 
 ---
 
@@ -108,3 +108,4 @@ Demonstrate how projects can adapt to different languages and regional formats u
 - Adds a unique dimension to your portfolio beyond pure data structures.
 
 ---
+*Project concept suggested by Microsoft Copilot.*
