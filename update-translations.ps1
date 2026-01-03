@@ -6,7 +6,7 @@ xgettext --language=Python --keyword=_ `
     language_constants.py
 
 # 2. Define the languages you want to support
-$languages = @("af_ZA", "en_ZA", "zu_ZA", "fr_FR", "pt_PT", "es_ES")
+$languages = @("af_ZA", "en_ZA", "zu_ZU", "fr_FR", "pt_PT", "es_ES")
 
 foreach ($lang in $languages) {
     $poDir = "locales\$lang\LC_MESSAGES"

@@ -20,7 +20,9 @@ This repository showcases practical applications of Python, ranging from beginne
 | Polygon Area Calculator | freeCodeCamp  | Defines Rectangle and Square classes,  with methods for geometric calculations and ASCII rendering.                  |
 | Queue Project           | Microsoft Copilot  | Implement a queue using a list.                            |
 | Queue with linked list  | Microsoft Copilot  | Implement a queue using a linked list.                            |
-| Queue With doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list |
+| Queue with doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list|
+| Circular queue | Microsoft Coplit | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages|
+| Demo Languages | Microsoft Copilot | Short demontration of switching between languages at runtime
 
 ---
 
