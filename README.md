@@ -21,8 +21,9 @@ This repository showcases practical applications of Python, ranging from beginne
 | Queue Project           | Microsoft Copilot  | Implement a queue using a list.                            |
 | Queue with linked list  | Microsoft Copilot  | Implement a queue using a linked list.                            |
 | Queue with doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list|
-| Circular queue | Microsoft Coplit | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages|
+| Circular queue | Microsoft Copilot | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages|
 | Demo Languages | Microsoft Copilot | Short demontration of switching between languages at runtime
+|Priority queue | Microsoft Copilot | Implement a priority queue using heapq |
 
 ---
 
