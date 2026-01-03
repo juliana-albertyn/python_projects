@@ -12,8 +12,12 @@ from typing import Any
 import gettext
 import language_constants as lc
 
-#lang = gettext.translation("messages", localedir="locales", languages=["af_ZA"])
 lang = gettext.translation("messages", localedir="locales", languages=["en_ZA"])
+# lang = gettext.translation("messages", localedir="locales", languages=["af_ZA"])
+# lang = gettext.translation("messages", localedir="locales", languages=["zu_ZU"])
+# lang = gettext.translation("messages", localedir="locales", languages=["es_ES"])
+# lang = gettext.translation("messages", localedir="locales", languages=["pt_PT"])
+# lang = gettext.translation("messages", localedir="locales", languages=["fr_FR"])
 lang.install()
 _ = lang.gettext
 
