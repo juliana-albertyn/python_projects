@@ -4,7 +4,7 @@
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  
 [![Type Checking: Pylance](https://img.shields.io/badge/type%20checking-pylance-lightgrey.svg)](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)  
 [![freeCodeCamp](https://img.shields.io/badge/freeCodeCamp-certification-green.svg)](https://www.freecodecamp.org/)  
-[![Progress](https://img.shields.io/badge/Projects%20Completed-2%2F5-success.svg)](https://github.com/<your-username>/python-projects)  
+[![Progress](https://img.shields.io/badge/Projects%20Completed-3%2F5-success.svg)](https://github.com/juliana-albertyn/python_projects)  
 
 A collection of Python projects completed as part of the **freeCodeCamp certification** curriculum, along with additional projects inspired and guided by **Microsoft Copilot**.  
 This repository showcases practical applications of Python, ranging from beginner exercises to more advanced, real‑world projects.
@@ -19,11 +19,11 @@ This repository showcases practical applications of Python, ranging from beginne
 | Budget App              | freeCodeCamp  | Tracks spending in categories and generates a spend chart.                  |
 | Polygon Area Calculator | freeCodeCamp  | Defines Rectangle and Square classes,  with methods for geometric calculations and ASCII rendering.                  |
 | Queue Project           | Microsoft Copilot  | Implement a queue using a list.                            |
-| Queue with linked list  | Microsoft Copilot  | Implement a queue using a linked list.                            |
-| Queue with doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list|
-| Circular queue | Microsoft Copilot | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages|
-| Demo Languages | Microsoft Copilot | Short demontration of switching between languages at runtime
-|Priority queue | Microsoft Copilot | Implement a priority queue using heapq |
+| Queue with linked list  | Microsoft Copilot  | Implement a queue using a linked list.|                            |
+| Queue with doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list.|
+| Circular queue | Microsoft Copilot | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages.|
+| Demo Languages | Microsoft Copilot | Short demontration of switching between languages at runtime.|
+|Priority queue | Microsoft Copilot | Implement a priority queue using heapq. |
 
 ---
 
