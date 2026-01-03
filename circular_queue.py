@@ -1,5 +1,5 @@
 """
-Module: queue-with-fixed-size-array
+Module: circular_queue
 Purpose: Implement a circular queue
 """
 
