@@ -21,65 +21,90 @@ class Queue:
     tail (int) : the index where the next element will be inserted.
     length (int) : the number of elements.
     """
-    def __init__(self):
-        """ Initialise an instance of Queue. """
-        self.queue_items : list[Any] = []
-        self.capacity = 0
-        self.head = 0
-        self.tail = 0
-        self.length = 0
+
+    def __init__(self, capacity: int) -> None:
+        """Initialise an instance of Queue."""
+        self._queue_items : list[Any] = []
+        self._capacity = capacity
+        self._head = 0
+        self._tail = 0
+        self._length = 0
 
     def __len__(self) -> int:
-        """ Returns the number of items currently in the list. """
-        return self.length
+        """Returns the number of items currently in the list."""
+        return self._length
 
     def enqueue(self, element: Any) -> None:
-        """ Add an element at the tail. """
-        if len(self) == self.capacity:
+        """Add an element at the tail."""
+        if len(self) == self._capacity:
             raise OverflowError("Queue is full")
-        self.queue_items.append(element)
-        self.tail = (self.tail + 1) % self.capacity
-        self.length += 1
+        self._queue_items.append(element)
+        self._tail = (self._tail + 1) % self._capacity
+        self._length += 1
 
     def dequeue(self) -> Any:
-        """ Remove the element at the head. """
-        item = None 
-        if len(self.queue_items) == 0:
+        """Remove the element at the head."""
+        if len(self._queue_items) == 0:
             raise ValueError("Queue is empty")
-        if self.queue_items[self.head] is not None:
-            item = self.queue_items[self.head]
-            self.queue_items.pop(self.head)
-        self.head = (self.head + 1) % self.capacity
-        self.length -= 1
+        if self._queue_items[self._head] is None:
+            raise RuntimeError("Head should never be None here")
+        item = self._queue_items[self._head]
+        self._queue_items.pop(self._head)
+        self._head = (self._head) % self._capacity
+        self._length -= 1
         return item
 
     def peek(self) -> Any:
-        """ Return the element at the head without removng it. """
-        if len(self.queue_items) == 0:
+        """Return the element at the head without removng it."""
+        if len(self._queue_items) == 0:
             raise ValueError("Queue is empty")
-        return self.queue_items[self.head]
+        return self._queue_items[self._head]
 
     def is_empty(self) -> bool:
-        """ Returns True if the list is empty, False if it contains elements. """
-        return self.length == 0
+        """Returns True if the list is empty, False if it contains elements."""
+        return self._length == 0
 
     def is_full(self) -> bool:
-        """ Returns True if the list is filled to capacity, else returns False. """
-        return self.length == self.capacity
+        """Returns True if the list is filled to capacity, else returns False."""
+        return self._length == self._capacity
 
-    
-q = Queue()
-q.capacity = 5
-print(f"Empty?: {q.is_empty()}")    
-for item in range(101, 106):
-    q.enqueue(item)
-print(f"Count: {len(q)} Head index: {q.head} Tail index: {q.tail}")    
-print(f"Full?: {q.is_full()}")    
-print(f"Dequeue: {q.dequeue()}")
-print(f"Count: {len(q)} Head index: {q.head} Tail index: {q.tail}")    
-print(f"Dequeue: {q.dequeue()}")
-print(f"Count: {len(q)} Head index: {q.head} Tail index: {q.tail}")    
-print(f"Enqueue: {q.enqueue(201)}")
-print(f"Count: {len(q)} Head index: {q.head} Tail index: {q.tail}")    
-print(f"Enqueue: {q.enqueue(202)}")
-print(f"Count: {len(q)} Head index: {q.head} Tail index: {q.tail}")    
+# create and check empty
+q = Queue(5)
+print(f"Empty?: {q.is_empty()}")
+# enqueue to capacity
+try:
+    for item in range(101, 106):
+        q.enqueue(item)
+        print(f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
+except ValueError as e:
+    print(e)
+except RuntimeError as e:
+    print(e)
+print(f"Full?: {q.is_full()}")
+# trying to go over capacity
+try:
+    for item in range(106, 108):
+        q.enqueue(item)
+        print(f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
+except ValueError as e:
+    print(e)
+except RuntimeError as e:
+    print(e)
+except OverflowError as e:
+    print(e)  
+
+try:
+# dequeue 3   
+    for i in range(0, 3):
+        print(f"Dequeue: {q.dequeue()} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
+# enqueue 2        
+    for item in range(201, 203)    :
+        q.enqueue(item)
+        print(f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}")
+    print(f"Full?: {q.is_full()}")
+    print(f"Empty?: {q.is_empty()}")
+
+except ValueError as e:
+    print(e)
+except RuntimeError as e:
+    print(e)
