@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-03 11:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: language_constants.py:16
+msgid "Queue"
+msgstr ""
+
+#: language_constants.py:17
+msgid "Count"
+msgstr ""
+
+#: language_constants.py:18
+msgid "Head"
+msgstr ""
+
+#: language_constants.py:19
+msgid "Tail"
+msgstr ""
+
+#: language_constants.py:20
+msgid "Empty?"
+msgstr ""
+
+#: language_constants.py:21
+msgid "Full?"
+msgstr ""
+
+#: language_constants.py:24
+msgid "Queue is empty"
+msgstr ""
+
+#: language_constants.py:25
+msgid "Queue is full"
+msgstr ""
+
+#: language_constants.py:28
+msgid "Length"
+msgstr ""
+
+#: language_constants.py:29
+msgid "Peek"
+msgstr ""
+
+#: language_constants.py:30
+msgid "Enqueue"
+msgstr ""
+
+#: language_constants.py:31
+msgid "Dequeue"
+msgstr ""
+
+#: language_constants.py:34
+msgid "Cannot enqueue: queue is full"
+msgstr ""
+
+#: language_constants.py:35
+msgid "Cannot dequeue: queue is empty"
+msgstr ""

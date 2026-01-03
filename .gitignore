@@ -65,6 +65,9 @@ htmlcov/
 *.pt
 *.pth
 
+# gettext: compiled .po files
+locales/*/LC_MESSAGES/*.mo
+
 # -------------------------
 # Local experiments or data
 # -------------------------

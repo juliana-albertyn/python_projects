@@ -60,3 +60,51 @@ Implement a **Queue** using a **fixed-size array** (list) with wrap‑around ind
 - Reinforces the idea that the same ADT (queue) can be implemented with different trade‑offs.
 
 ---
+
+## Internationalisation Exercise
+
+### Goal  
+Demonstrate how projects can adapt to different languages and regional formats using Python’s **`gettext`** (for translations) and **`locale`** (for formatting).
+
+---
+
+### Exercise Outline
+1. **Add metadata strings for translation**  
+   - Wrap user‑facing messages (like `"Queue is empty"`, `"Length"`, `"Peek"`) in `_()` so they can be translated.
+
+   ```python
+   import gettext
+   _ = gettext.gettext
+
+   if q.is_empty():
+       print(_("Queue is empty"))
+   ```
+
+2. **Provide translations**  
+   - Create `.po` files for at least two languages (e.g. English and Afrikaans).  
+   - Translate key phrases like:
+     - `"Queue is empty"` → `"Waglys is leeg"`  
+     - `"Length"` → `"Lengte"`  
+     - `"Peek"` → `"Kyk"`  
+
+3. **Demonstrate locale formatting**  
+   - Show currency or date formatting in South African English (`en_ZA`) vs another locale.  
+   - Example:
+     ```python
+     import locale
+     locale.setlocale(locale.LC_ALL, "en_ZA.UTF-8")
+     print(locale.currency(1234.56))  # R1,234.56
+     ```
+
+4. **Run demo in two languages**  
+   - Switch between English and Afrikaans translations.  
+   - Show that the same queue operations print messages in different languages.
+
+---
+
+## Why This Matters
+- Shows **regionally adapted software** — a key consulting skill.  
+- Demonstrates awareness of **i18n/l10n best practices**.  
+- Adds a unique dimension to your portfolio beyond pure data structures.
+
+---

@@ -1,0 +1,71 @@
+"Project-Id-Version: Queue Project 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-03 11:45+0000\n"
+"PO-Revision-Date: 2026-01-03 11:45+0200\n"
+"Last-Translator: Juliana Albertyn <julie_albertyn@yahoo.com>\n"
+"Language-Team: Afrikaans\n"
+"Language: af_ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Translator notes:
+# Please note: while every effort has been made to provide accurate translations,
+# some phrases may contain errors or imperfect wording. Apologies for any
+# mis‑translations, and feedback is welcome to improve future versions.
+
+#: language_constants.py:16
+msgid "Queue"
+msgstr "Umugqa"
+
+#: language_constants.py:17
+msgid "Count"
+msgstr "Bala"
+
+#: language_constants.py:18
+msgid "Head"
+msgstr "Ikhanda"
+
+#: language_constants.py:19
+msgid "Tail"
+msgstr "Umsila"
+
+#: language_constants.py:20
+msgid "Empty?"
+msgstr "Ayinalutho?"
+
+#: language_constants.py:21
+msgid "Full?"
+msgstr "Igcwele?"
+
+#: language_constants.py:24
+msgid "Queue is empty"
+msgstr "Umugqa awunalutho"
+
+#: language_constants.py:25
+msgid "Queue is full"
+msgstr "Umugqa ugcwele"
+
+#: language_constants.py:28
+msgid "Length"
+msgstr "Ubude"
+
+#: language_constants.py:29
+msgid "Peek"
+msgstr "Bheka (peek)"
+
+#: language_constants.py:30
+msgid "Enqueue"
+msgstr "Faka emugqeni"
+
+#: language_constants.py:31
+msgid "Dequeue"
+msgstr "Khipha emugqeni"
+
+#: language_constants.py:34
+msgid "Cannot enqueue: queue is full"
+msgstr "Ayikwazi ukufaka: umugqa ugcwele"
+
+#: language_constants.py:35
+msgid "Cannot dequeue: queue is empty"
+msgstr "Ayikwazi ukukhipha: umugqa awunalutho"

@@ -9,6 +9,13 @@ __status__ = "development"  # or testing or production
 __date__ = "2026-01-02"
 
 from typing import Any
+import gettext
+import language_constants as lc
+
+#lang = gettext.translation("messages", localedir="locales", languages=["af_ZA"])
+lang = gettext.translation("messages", localedir="locales", languages=["en_ZA"])
+lang.install()
+_ = lang.gettext
 
 
 class Queue:
@@ -32,13 +39,17 @@ class Queue:
         self._length = 0
 
     def __len__(self) -> int:
-        """Returns the number of items currently in the list."""
+        """Returns the number of items currently in the queue."""
         return self._length
+
+    def __str__(self) -> str:
+        """Returns a string representation of the queue for debugging purposes."""
+        return f"{_(lc.COUNT)}: {len(q)} {_(lc.HEAD)}: {q._head} {_(lc.TAIL)}: {q._tail} {_(lc.QUEUE)}: {q._queue_items}"
 
     def enqueue(self, element: Any) -> None:
         """Add an element at the tail."""
         if len(self) == self._capacity:
-            raise OverflowError("Queue is full")
+            raise OverflowError(_(lc.ERROR_OVERFLOW))
         self._queue_items[self._tail] = element
         self._tail = (self._tail + 1) % self._capacity
         self._length += 1
@@ -46,7 +57,7 @@ class Queue:
     def dequeue(self) -> Any:
         """Remove the element at the head."""
         if self._length == 0:
-            raise ValueError("Queue is empty")
+            raise ValueError(_(lc.ERROR_UNDERFLOW))
         item = self._queue_items[self._head]
         self._queue_items[self._head] = None
         self._head = (self._head + 1) % self._capacity
@@ -56,7 +67,7 @@ class Queue:
     def peek(self) -> Any:
         """Return the element at the head without removing it."""
         if self._length == 0:
-            raise ValueError("Queue is empty")
+            raise ValueError(_(lc.QUEUE_IS_EMPTY))
         return self._queue_items[self._head]
 
     def is_empty(self) -> bool:
@@ -70,29 +81,21 @@ class Queue:
 
 # create and check empty
 q = Queue(5)
-print(f"Empty?: {q.is_empty()}")
+print(f"{_(lc.EMPTY_QUERY)}: {q.is_empty()}")
 # enqueue to capacity
 try:
     for item in range(101, 106):
         q.enqueue(item)
-        print(
-            f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
-        )
+        print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
 except ValueError as e:
     print(e)
-except RuntimeError as e:
-    print(e)
-print(f"Full?: {q.is_full()}")
+print(f"{_(lc.FULL_QUERY)}: {q.is_full()}")
 # trying to go over capacity
 try:
     for item in range(106, 108):
         q.enqueue(item)
-        print(
-            f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
-        )
+        print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
 except ValueError as e:
-    print(e)
-except RuntimeError as e:
     print(e)
 except OverflowError as e:
     print(e)
@@ -100,19 +103,13 @@ except OverflowError as e:
 try:
     # dequeue 3
     for i in range(0, 3):
-        print(
-            f"Dequeue: {q.dequeue()} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
-        )
+        print(f"{_(lc.QUEUE_DEQUEUE)}: {q.dequeue()} {q}")
     # enqueue 2
     for item in range(201, 203):
         q.enqueue(item)
-        print(
-            f"Enqueue: {item} Count: {len(q)} Head: {q._head} Tail: {q._tail} Queue: {q._queue_items}"
-        )
-    print(f"Full?: {q.is_full()}")
-    print(f"Empty?: {q.is_empty()}")
+        print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
+    print(f"{_(lc.FULL_QUERY)}: {q.is_full()}")
+    print(f"{_(lc.EMPTY_QUERY)}: {q.is_empty()}")
 
 except ValueError as e:
-    print(e)
-except RuntimeError as e:
     print(e)

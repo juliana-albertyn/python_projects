@@ -42,6 +42,75 @@ Run a project:
 python project_name.py
 ```
 
+## 📝 Translation Setup
+
+This project uses **GNU gettext** for internationalisation (i18n).  
+Python’s `gettext` module is part of the standard library, so no extra Python package is needed.  
+However, you must install the **gettext command‑line tools** (`xgettext`, `msgfmt`, `msgmerge`) to extract and compile translations.
+
+### 🔧 Installation
+
+#### Windows 10/11
+1. Download the latest Windows build of gettext tools (e.g. from [mlocati/gettext-windows](https://github.com/mlocati/gettext-windows/releases)).
+2. Extract the archive to a folder such as `C:\DevTools\gettext`.
+3. Add the `bin` folder to your **PATH**:
+   - Press **Win + R**, type `sysdm.cpl`, go to **Advanced → Environment Variables**.
+   - Edit `Path` → Add:  
+     ```
+     C:\DevTools\gettext\bin
+     ```
+   - Restart PowerShell or Command Prompt.
+4. Test with:
+   ```powershell
+   xgettext --version
+   ```
+
+#### Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install gettext
+```
+
+#### macOS (Homebrew)
+```bash
+brew install gettext
+brew link --force gettext
+```
+
+---
+
+### 📂 Workflow
+
+1. **Extract strings** into a template:
+   ```bash
+   xgettext --language=Python --keyword=_ --output=locales/messages.pot queue-with-fixed-size-array.py language_constants.py
+   ```
+
+2. **Create `.po` files** for each language:
+   ```bash
+   mkdir -p locales/af_ZA/LC_MESSAGES
+   cp locales/messages.pot locales/af_ZA/LC_MESSAGES/messages.po
+   ```
+
+3. **Translate** the `msgstr` entries in `.po`.
+
+4. **Compile** into `.mo`:
+   ```bash
+   msgfmt locales/af_ZA/LC_MESSAGES/messages.po -o locales/af_ZA/LC_MESSAGES/messages.mo
+   ```
+
+5. **Run your app** — gettext will load the `.mo` file automatically.
+
+---
+
+### Version Control
+
+- Commit `messages.pot` and all `.po` files.  
+- Ignore `.mo` files (compiled binaries) in `.gitignore`:
+  ```
+  locales/*/LC_MESSAGES/*.mo
+  ```
+
 ---
 
 ## 🛠️ Technologies
