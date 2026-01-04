@@ -23,7 +23,8 @@ This repository showcases practical applications of Python, ranging from beginne
 | Queue with doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list.|
 | Circular queue | Microsoft Copilot | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages.|
 | Demo Languages | Microsoft Copilot | Short demontration of switching between languages at runtime.|
-|Priority queue | Microsoft Copilot | Implement a priority queue using heapq. |
+| Priority queue | Microsoft Copilot | Implement a priority queue using heapq. |
+| Round robin task scheduler | Microsoft Copilot | Simulates a CPU scheduling algorithm using a circular queue to manage tasks.
 
 ---
 
@@ -84,25 +85,30 @@ brew link --force gettext
 
 ### 📂 Workflow
 
-1. **Extract strings** into a template:
-   ```bash
-   xgettext --language=Python --keyword=_ --output=locales/messages.pot queue-with-fixed-size-array.py language_constants.py
+1. **Use create_temp_translation_constants.py** to create a temporary copy of language_constants.py called language_constants_temp.py, which is used by xgettext
+   ```
+   python create_temp_translation_constants.py
    ```
 
-2. **Create `.po` files** for each language:
+2. **Extract strings** into a template:
+   ```bash
+   xgettext --language=Python --keyword=_ --output=locales/messages.pot language_constants_temp.py
+   ```
+
+3. **Create `.po` files** for each language:
    ```bash
    mkdir -p locales/af_ZA/LC_MESSAGES
    cp locales/messages.pot locales/af_ZA/LC_MESSAGES/messages.po
    ```
 
-3. **Translate** the `msgstr` entries in `.po`.
+4. **Translate** the `msgstr` entries in `.po`.
 
-4. **Compile** into `.mo`:
+5. **Compile** into `.mo`:
    ```bash
    msgfmt locales/af_ZA/LC_MESSAGES/messages.po -o locales/af_ZA/LC_MESSAGES/messages.mo
    ```
 
-5. **Run your app** — gettext will load the `.mo` file automatically.
+6. **Run your app** — gettext will load the `.mo` file automatically.
 
 ---
 
