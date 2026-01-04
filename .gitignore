@@ -73,7 +73,8 @@ locales/*/LC_MESSAGES/*.pot
 # -------------------------
 # Local experiments or data
 # -------------------------
-
+language_constants_temp.py
+locales/messages.pot
 
 # -------------------------
 # Exceptions (curated datasets you DO want tracked)

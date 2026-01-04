@@ -1,9 +1,8 @@
 msgid ""
 msgstr ""
-
 "Project-Id-Version: Queue Project 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 11:45+0000\n"
+"POT-Creation-Date: 2026-01-04 13:54+0200\n"
 "PO-Revision-Date: 2026-01-03 11:45+0200\n"
 "Last-Translator: Juliana Albertyn <julie_albertyn@yahoo.com>\n"
 "Language-Team: Afrikaans\n"
@@ -18,59 +17,70 @@ msgstr ""
 # mis‑translations, and feedback is welcome to improve future versions.
 # https://www.roekeloos.co.za/woordeboeke/rekenaarwoordeboek/
 
+#: language_constants_temp.py:16
+msgid "Executing"
+msgstr "Uitvoer"
 
-#: language_constants.py:16
+#: language_constants_temp.py:21
 msgid "Queue"
 msgstr "Tou"
 
-#: language_constants.py:17
-msgid "Count"
-msgstr "Aantal"
-
-#: language_constants.py:18
+#: language_constants_temp.py:23
 msgid "Head"
 msgstr "Kop"
 
-#: language_constants.py:19
+#: language_constants_temp.py:24
 msgid "Tail"
 msgstr "Stert"
 
-#: language_constants.py:20
+#: language_constants_temp.py:27
 msgid "Empty?"
 msgstr "Leeg?"
 
-#: language_constants.py:21
+#: language_constants_temp.py:28
 msgid "Full?"
 msgstr "Vol?"
 
-#: language_constants.py:24
+#: language_constants_temp.py:29
 msgid "Queue is empty"
 msgstr "Tou is leeg"
 
-#: language_constants.py:25
+#: language_constants_temp.py:30
 msgid "Queue is full"
 msgstr "Tou is vol"
 
-#: language_constants.py:28
-msgid "Length"
-msgstr "Lengte"
-
-#: language_constants.py:29
+#: language_constants_temp.py:34
 msgid "Peek"
 msgstr "Loer"
 
-#: language_constants.py:30
+#: language_constants_temp.py:35
 msgid "Enqueue"
 msgstr "Voeg by tou"
 
-#: language_constants.py:31
+#: language_constants_temp.py:36
 msgid "Dequeue"
 msgstr "Verwyder uit tou"
 
-#: language_constants.py:34
+#: language_constants_temp.py:39
 msgid "Cannot enqueue: queue is full"
 msgstr "Kan nie in tou voeg nie: tou is vol"
 
-#: language_constants.py:35
+#: language_constants_temp.py:40
 msgid "Cannot dequeue: queue is empty"
 msgstr "Kan nie uit tou verwyder nie: tou is leeg"
+
+#: language_constants_temp.py:43
+msgid "Task and time allocated must be supplied"
+msgstr "Taak en toegewysde tyd moet verskaf word"
+
+#: language_constants_temp.py:44
+msgid "Tasks completed"
+msgstr "Take voltooi"
+
+#: language_constants_temp.py:33
+msgid "Length"
+msgstr "Lengte"
+
+#: language_constants_temp.py:22
+msgid "Count"
+msgstr "Aantal"

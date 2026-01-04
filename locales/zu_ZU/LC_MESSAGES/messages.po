@@ -1,9 +1,8 @@
 msgid ""
 msgstr ""
-
 "Project-Id-Version: Queue Project 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 11:45+0000\n"
+"POT-Creation-Date: 2026-01-04 13:54+0200\n"
 "PO-Revision-Date: 2026-01-03 11:45+0200\n"
 "Last-Translator: Juliana Albertyn <julie_albertyn@yahoo.com>\n"
 "Language-Team: Afrikaans\n"
@@ -17,58 +16,70 @@ msgstr ""
 # some phrases may contain errors or imperfect wording. Apologies for any
 # mis‑translations, and feedback is welcome to improve future versions.
 
-#: language_constants.py:16
+#: language_constants_temp.py:16
+msgid "Executing"
+msgstr "Ukuphumeza"
+
+#: language_constants_temp.py:21
 msgid "Queue"
 msgstr "Umugqa"
 
-#: language_constants.py:17
-msgid "Count"
-msgstr "Bala"
-
-#: language_constants.py:18
+#: language_constants_temp.py:23
 msgid "Head"
 msgstr "Ikhanda"
 
-#: language_constants.py:19
+#: language_constants_temp.py:24
 msgid "Tail"
 msgstr "Umsila"
 
-#: language_constants.py:20
+#: language_constants_temp.py:27
 msgid "Empty?"
 msgstr "Ayinalutho?"
 
-#: language_constants.py:21
+#: language_constants_temp.py:28
 msgid "Full?"
 msgstr "Igcwele?"
 
-#: language_constants.py:24
+#: language_constants_temp.py:29
 msgid "Queue is empty"
 msgstr "Umugqa awunalutho"
 
-#: language_constants.py:25
+#: language_constants_temp.py:30
 msgid "Queue is full"
 msgstr "Umugqa ugcwele"
 
-#: language_constants.py:28
-msgid "Length"
-msgstr "Ubude"
-
-#: language_constants.py:29
+#: language_constants_temp.py:34
 msgid "Peek"
 msgstr "Bheka (peek)"
 
-#: language_constants.py:30
+#: language_constants_temp.py:35
 msgid "Enqueue"
 msgstr "Faka emugqeni"
 
-#: language_constants.py:31
+#: language_constants_temp.py:36
 msgid "Dequeue"
 msgstr "Khipha emugqeni"
 
-#: language_constants.py:34
+#: language_constants_temp.py:39
 msgid "Cannot enqueue: queue is full"
 msgstr "Ayikwazi ukufaka: umugqa ugcwele"
 
-#: language_constants.py:35
+#: language_constants_temp.py:40
 msgid "Cannot dequeue: queue is empty"
 msgstr "Ayikwazi ukukhipha: umugqa awunalutho"
+
+#: language_constants_temp.py:43
+msgid "Task and time allocated must be supplied"
+msgstr "Umsebenzi nesikhathi esabelwe kufanele kunikezwe"
+
+#: language_constants_temp.py:44
+msgid "Tasks completed"
+msgstr "Imisebenzi eqediwe"
+
+#: language_constants_temp.py:33
+msgid "Length"
+msgstr "Ubude"
+
+#: language_constants_temp.py:22
+msgid "Count"
+msgstr "Bala"

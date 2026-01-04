@@ -1,6 +1,6 @@
 """
 Module: language_constants
-Purpose: Centralised message strings for queue projects.
+Purpose: Centralised message strings for units in python_projects.
 """
 
 __author__ = "Juliana Albertyn"

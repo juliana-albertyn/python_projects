@@ -3,7 +3,7 @@
 # 1. Extract translatable strings from Python source into a template (.pot)
 xgettext --language=Python --keyword=_ `
     --output=locales/messages.pot `
-    language_constants.py
+    language_constants_temp.py
 
 # 2. Define the languages you want to support
 $languages = @("af_ZA", "en_ZA", "zu_ZU", "fr_FR", "pt_PT", "es_ES")

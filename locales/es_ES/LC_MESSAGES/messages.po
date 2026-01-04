@@ -1,9 +1,8 @@
 msgid ""
 msgstr ""
-
 "Project-Id-Version: Queue Project 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 11:45+0000\n"
+"POT-Creation-Date: 2026-01-04 13:54+0200\n"
 "PO-Revision-Date: 2026-01-03 11:45+0200\n"
 "Last-Translator: Juliana Albertyn <julie_albertyn@yahoo.com>\n"
 "Language-Team: Spanish\n"
@@ -17,59 +16,71 @@ msgstr ""
 # some phrases may contain errors or imperfect wording. Apologies for any
 # mis‑translations, and feedback is welcome to improve future versions.
 
+#: language_constants_temp.py:16
+msgid "Executing"
+msgstr "Exigente"
 
-#: language_constants.py:16
+
+#: language_constants_temp.py:21
 msgid "Queue"
 msgstr "Cola"
 
-#: language_constants.py:17
-msgid "Count"
-msgstr "Contador"
-
-#: language_constants.py:18
+#: language_constants_temp.py:23
 msgid "Head"
 msgstr "Cabeza"
 
-#: language_constants.py:19
+#: language_constants_temp.py:24
 msgid "Tail"
 msgstr "Cola (final)"
 
-#: language_constants.py:20
+#: language_constants_temp.py:27
 msgid "Empty?"
 msgstr "¿Vacía?"
 
-#: language_constants.py:21
+#: language_constants_temp.py:28
 msgid "Full?"
 msgstr "¿Llena?"
 
-#: language_constants.py:24
+#: language_constants_temp.py:29
 msgid "Queue is empty"
 msgstr "La cola está vacía"
 
-#: language_constants.py:25
+#: language_constants_temp.py:30
 msgid "Queue is full"
 msgstr "La cola está llena"
 
-#: language_constants.py:28
-msgid "Length"
-msgstr "Longitud"
-
-#: language_constants.py:29
+#: language_constants_temp.py:34
 msgid "Peek"
 msgstr "Mirar (peek)"
 
-#: language_constants.py:30
+#: language_constants_temp.py:35
 msgid "Enqueue"
 msgstr "Encolar"
 
-#: language_constants.py:31
+#: language_constants_temp.py:36
 msgid "Dequeue"
 msgstr "Desencolar"
 
-#: language_constants.py:34
+#: language_constants_temp.py:39
 msgid "Cannot enqueue: queue is full"
 msgstr "No se puede encolar: la cola está llena"
 
-#: language_constants.py:35
+#: language_constants_temp.py:40
 msgid "Cannot dequeue: queue is empty"
 msgstr "No se puede desencolar: la cola está vacía"
+
+#: language_constants_temp.py:43
+msgid "Task and time allocated must be supplied"
+msgstr "Se debe proporcionar la tarea y el tiempo asignado."
+
+#: language_constants_temp.py:44
+msgid "Tasks completed"
+msgstr "Tareas computadora"
+
+#: language_constants_temp.py:33
+msgid "Length"
+msgstr "Longitud"
+
+#: language_constants_temp.py:22
+msgid "Count"
+msgstr "Contador"
