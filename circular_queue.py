@@ -22,7 +22,7 @@ lang.install()
 _ = lang.gettext
 
 
-class Queue:
+class CircularQueue:
     """
     A circular queue.
 
@@ -47,8 +47,14 @@ class Queue:
         return self._length
 
     def __str__(self) -> str:
-        """Returns a string representation of the queue for debugging purposes."""
-        return f"{_(lc.COUNT)}: {len(q)} {_(lc.HEAD)}: {q._head} {_(lc.TAIL)}: {q._tail} {_(lc.QUEUE)}: {q._queue_items}"
+        """Returns a string representation of the queue.
+        It prints a detailed representation when __debug__ is True,
+        and a concise summary otherwise.”
+        """
+        if __debug__:
+            return f"{_(lc.COUNT)}: {len(q)} {_(lc.HEAD)}: {q._head} {_(lc.TAIL)}: {q._tail} {_(lc.QUEUE)}: {q._queue_items}"
+        else:
+            return f"{q._queue_items}"
 
     def enqueue(self, element: Any) -> None:
         """Add an element at the tail."""
@@ -83,37 +89,38 @@ class Queue:
         return self._length == self._capacity
 
 
-# create and check empty
-q = Queue(5)
-print(f"{_(lc.EMPTY_QUERY)}: {q.is_empty()}")
-# enqueue to capacity
-try:
-    for item in range(101, 106):
-        q.enqueue(item)
-        print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
-except ValueError as e:
-    print(e)
-print(f"{_(lc.FULL_QUERY)}: {q.is_full()}")
-# trying to go over capacity
-try:
-    for item in range(106, 108):
-        q.enqueue(item)
-        print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
-except ValueError as e:
-    print(e)
-except OverflowError as e:
-    print(e)
-
-try:
-    # dequeue 3
-    for i in range(0, 3):
-        print(f"{_(lc.QUEUE_DEQUEUE)}: {q.dequeue()} {q}")
-    # enqueue 2
-    for item in range(201, 203):
-        q.enqueue(item)
-        print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
-    print(f"{_(lc.FULL_QUERY)}: {q.is_full()}")
+if __name__ == "__main__":
+    # create and check empty
+    q = CircularQueue(5)
     print(f"{_(lc.EMPTY_QUERY)}: {q.is_empty()}")
+    # enqueue to capacity
+    try:
+        for item in range(101, 106):
+            q.enqueue(item)
+            print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
+    except ValueError as e:
+        print(e)
+    print(f"{_(lc.FULL_QUERY)}: {q.is_full()}")
+    # trying to go over capacity
+    try:
+        for item in range(106, 108):
+            q.enqueue(item)
+            print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
+    except ValueError as e:
+        print(e)
+    except OverflowError as e:
+        print(e)
 
-except ValueError as e:
-    print(e)
+    try:
+        # dequeue 3
+        for i in range(0, 3):
+            print(f"{_(lc.QUEUE_DEQUEUE)}: {q.dequeue()} {q}")
+        # enqueue 2
+        for item in range(201, 203):
+            q.enqueue(item)
+            print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
+        print(f"{_(lc.FULL_QUERY)}: {q.is_full()}")
+        print(f"{_(lc.EMPTY_QUERY)}: {q.is_empty()}")
+
+    except ValueError as e:
+        print(e)

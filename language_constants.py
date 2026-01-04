@@ -8,15 +8,24 @@ __email__ = "julie_albertyn@yahoo.com"
 __status__ = "development"  # or testing or production
 __date__ = "2026-01-03"
 
-# Queue descriptions for demonstation
+import gettext
+
+_ = gettext.gettext
+
+## General ##
+EXECUTING = "Executing"
+
+## Queues ##
+
+# Queue descriptions for debugging
 QUEUE = "Queue"
 COUNT = "Count"  # used in demo output
 HEAD = "Head"
 TAIL = "Tail"
-EMPTY_QUERY = "Empty?"
-FULL_QUERY = "Full?"
 
 # Queue status messages
+EMPTY_QUERY = "Empty?"
+FULL_QUERY = "Full?"
 QUEUE_IS_EMPTY = "Queue is empty"
 QUEUE_IS_FULL = "Queue is full"
 
@@ -26,6 +35,10 @@ QUEUE_PEEK = "Peek"
 QUEUE_ENQUEUE = "Enqueue"
 QUEUE_DEQUEUE = "Dequeue"
 
-# Error messages
+# Queue error messages
 ERROR_OVERFLOW = "Cannot enqueue: queue is full"
 ERROR_UNDERFLOW = "Cannot dequeue: queue is empty"
+
+## Task scheduler ##
+TASK_INVALID = "Task and time allocated must be supplied"
+TASKS_COMPLETED = "Tasks completed"
