@@ -52,9 +52,9 @@ class CircularQueue:
         and a concise summary otherwise.”
         """
         if __debug__:
-            return f"{_(lc.COUNT)}: {len(q)} {_(lc.HEAD)}: {q._head} {_(lc.TAIL)}: {q._tail} {_(lc.QUEUE)}: {q._queue_items}"
+            return f"{_(lc.COUNT)}: {len(self)} {_(lc.HEAD)}: {self._head} {_(lc.TAIL)}: {self._tail} {_(lc.QUEUE)}: {self._queue_items}"
         else:
-            return f"{q._queue_items}"
+            return f"{self._queue_items}"
 
     def enqueue(self, element: Any) -> None:
         """Add an element at the tail."""
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         for item in range(101, 106):
             q.enqueue(item)
             print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
-    except ValueError as e:
+    except OverflowError as e:
         print(e)
     print(f"{_(lc.FULL_QUERY)}: {q.is_full()}")
     # trying to go over capacity
@@ -106,8 +106,6 @@ if __name__ == "__main__":
         for item in range(106, 108):
             q.enqueue(item)
             print(f"{_(lc.QUEUE_ENQUEUE)}: {item} {q}")
-    except ValueError as e:
-        print(e)
     except OverflowError as e:
         print(e)
 

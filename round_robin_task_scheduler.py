@@ -12,7 +12,6 @@ from typing import Any
 from circular_queue import CircularQueue
 import language_constants as lc
 import gettext
-import language_constants as lc
 
 lang = gettext.translation("messages", localedir="locales", languages=["en_ZA"])
 # lang = gettext.translation("messages", localedir="locales", languages=["af_ZA"])
@@ -31,6 +30,7 @@ class TaskScheduler(CircularQueue):
     Attributes:
     _capacity (int) : the maximum number of elements allowed
     _time_slice (int) : fixed amount of time each task is allowed to run
+    _current_time (int) : global counter tracking elapsed time across all tasks
     _current_task (Any) : task currently being executed
     _completed_tasks (list[tuple[Any, int, int]]) : list of tasks that have been completed
     """
@@ -39,8 +39,9 @@ class TaskScheduler(CircularQueue):
         """Initialises an instance of TaskScheduler."""
         super().__init__(capacity)
         self._time_slice = time_slice
+        self._current_time = 0
         self._current_task = None
-        self._completed_tasks: list[Any] = []
+        self._completed_tasks: list[tuple[Any, int, int]] = []
 
     def add_task(self, task: Any, burst_time: int) -> None:
         """Add a new task with its required execution time to the scheduler."""
@@ -61,24 +62,25 @@ class TaskScheduler(CircularQueue):
             raise ValueError(_(lc.QUEUE_IS_EMPTY))
         while not self.is_empty():
             task, burst_time, time_remaining = self.dequeue()
-            slice = self._time_slice
-            while slice > 0 and time_remaining > 0:
+            time_slice_remaining = self._time_slice
+            while time_slice_remaining > 0 and time_remaining > 0:
                 self.execute_task(task)
-                slice -= 1
+                self._current_time += 1
+                time_slice_remaining -= 1
                 time_remaining -= 1
                 if time_remaining == 0:
                     break  # else the loop is repeated more times than necessary
             if time_remaining > 0:
                 self.enqueue((task, burst_time, time_remaining))
             else:
-                self._completed_tasks.append((task, burst_time))
+                self._completed_tasks.append((task, burst_time, self._current_time))
 
     def report(self):
         """A summary of the completed tasks in order of completion,
         and their turnaround times."""
         print(f"\n{_(lc.TASKS_COMPLETED)}: ({len(self._completed_tasks)})")
-        for index, (task, burst_time) in enumerate(self._completed_tasks):
-            print(f"{index+1}. {task} ({burst_time})")
+        for index, (task, burst_time, turnaround_time) in enumerate(self._completed_tasks):
+            print(f"{index+1}. {task} (Burst: {burst_time}, Turnaround: {turnaround_time})")
 
 
 if __name__ == "__main__":
