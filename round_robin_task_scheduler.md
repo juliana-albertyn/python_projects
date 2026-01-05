@@ -43,3 +43,4 @@ Simulate a **CPU scheduling algorithm** using a circular queue to manage tasks. 
 3. Print reports showing task completion order and turnaround times.  
 
 ---
+*Project concept suggested by Microsoft Copilot.*
