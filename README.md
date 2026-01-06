@@ -24,7 +24,8 @@ This repository showcases practical applications of Python, ranging from beginne
 | Circular queue | Project suggested by Microsoft Copilot | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages.|
 | Demo Languages | Project suggested by Microsoft Copilot | Short demontration of switching between languages at runtime.|
 | Priority queue | Project suggested by Microsoft Copilot | Implement a priority queue using heapq. |
-| Round robin task scheduler | Microsoft Copilot | Simulates a CPU scheduling algorithm using a circular queue to manage tasks.
+| Round robin task scheduler | Project suggested by Microsoft Copilot | Simulates a CPU scheduling algorithm using a circular queue to manage tasks.
+| Multilingual To‑Do List Manager | Project suggested by Microsoft Copilot | Multilingual To‑Do List Manager based on a priority queue
 
 ---
 
@@ -85,30 +86,17 @@ brew link --force gettext
 
 ### 📂 Workflow
 
-1. **Use create_temp_translation_constants.py** to create a temporary copy of language_constants.py called language_constants_temp.py, which is used by xgettext
-   ```
-   python create_temp_translation_constants.py
-   ```
+1. **Run update-translation.ps1** 
+   - Creates a temporary file (language_constants_temp.py)
+   - Uses `xgettext` to extract strings into a template 
+   - Create `.po` files for each language, or if the file already exists, updates the file with new `msgstr` entries
+   
+2. **Translate** the `msgstr` entries in `.po` for each language
 
-2. **Extract strings** into a template:
-   ```bash
-   xgettext --language=Python --keyword=_ --output=locales/messages.pot language_constants_temp.py
-   ```
-
-3. **Create `.po` files** for each language:
-   ```bash
-   mkdir -p locales/af_ZA/LC_MESSAGES
-   cp locales/messages.pot locales/af_ZA/LC_MESSAGES/messages.po
-   ```
-
-4. **Translate** the `msgstr` entries in `.po`.
-
-5. **Compile** into `.mo`:
-   ```bash
-   msgfmt locales/af_ZA/LC_MESSAGES/messages.po -o locales/af_ZA/LC_MESSAGES/messages.mo
-   ```
-
-6. **Run your app** — gettext will load the `.mo` file automatically.
+3. **Re-run update-translation.ps1** 
+   - This compiles the `.po` files into `.mo` using `msgfmt'
+   
+4. **Run the app** — where available, use `translator.set_locale(language_code)`, which calls gettext to load the `.mo` file automatically.
 
 ---
 
