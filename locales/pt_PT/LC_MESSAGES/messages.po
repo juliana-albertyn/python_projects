@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Queue Project 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-04 13:54+0200\n"
+"POT-Creation-Date: 2026-01-06 09:34+0200\n"
 "PO-Revision-Date: 2026-01-03 11:45+0200\n"
 "Last-Translator: Juliana Albertyn <julie_albertyn@yahoo.com>\n"
 "Language-Team: Afrikaans\n"
@@ -15,66 +15,105 @@ msgstr ""
 msgid "Executing"
 msgstr "Exigente"
 
-#: language_constants_temp.py:21
+#: language_constants_temp.py:19
+msgid "Unsupported locale"
+msgstr "Local não suportado"
+
+#: language_constants_temp.py:20
+msgid "Missing translations"
+msgstr "Traduções ausentes"
+
+#: language_constants_temp.py:25
 msgid "Queue"
 msgstr "Fila"
 
-#: language_constants_temp.py:23
+#: language_constants_temp.py:26
+msgid "Count"
+msgstr "Contador"
+
+#: language_constants_temp.py:27
 msgid "Head"
 msgstr "Cabeça"
 
-#: language_constants_temp.py:24
+#: language_constants_temp.py:28
 msgid "Tail"
 msgstr "Cauda"
 
-#: language_constants_temp.py:27
+#: language_constants_temp.py:31
 msgid "Empty?"
 msgstr "Vazia?"
 
-#: language_constants_temp.py:28
+#: language_constants_temp.py:32
 msgid "Full?"
 msgstr "Cheia?"
 
-#: language_constants_temp.py:29
+#: language_constants_temp.py:33
 msgid "Queue is empty"
 msgstr "A fila está vazia"
 
-#: language_constants_temp.py:30
+#: language_constants_temp.py:34
 msgid "Queue is full"
 msgstr "A fila está cheia"
 
-#: language_constants_temp.py:34
-msgid "Peek"
-msgstr "Espiar (peek)"
+#: language_constants_temp.py:37
+msgid "Priority"
+msgstr "Prioridade"
 
-#: language_constants_temp.py:35
-msgid "Enqueue"
-msgstr "Enfileirar"
-
-#: language_constants_temp.py:36
-msgid "Dequeue"
-msgstr "Desenfileirar"
+#: language_constants_temp.py:38
+msgid "High"
+msgstr "Alto"
 
 #: language_constants_temp.py:39
-msgid "Cannot enqueue: queue is full"
-msgstr "Não é possível enfileirar: a fila está cheia"
+msgid "Medium"
+msgstr "Médio"
 
 #: language_constants_temp.py:40
-msgid "Cannot dequeue: queue is empty"
-msgstr "Não é possível desenfileirar: a fila está vazia"
+msgid "Low"
+msgstr "Baixo"
 
 #: language_constants_temp.py:43
-msgid "Task and time allocated must be supplied"
-msgstr "A tarefa e o tempo alocado devem ser fornecidos"
-
-#: language_constants_temp.py:44
-msgid "Tasks completed"
-msgstr "Computador de tarefas"
-
-#: language_constants_temp.py:33
 msgid "Length"
 msgstr "Comprimento"
 
-#: language_constants_temp.py:22
-msgid "Count"
-msgstr "Contador"
+#: language_constants_temp.py:44
+msgid "Peek"
+msgstr "Espiar (peek)"
+
+#: language_constants_temp.py:45
+msgid "Enqueue"
+msgstr "Enfileirar"
+
+#: language_constants_temp.py:46
+msgid "Dequeue"
+msgstr "Desenfileirar"
+
+#: language_constants_temp.py:49
+msgid "Cannot enqueue: queue is full"
+msgstr "Não é possível enfileirar: a fila está cheia"
+
+#: language_constants_temp.py:50
+msgid "Cannot dequeue: queue is empty"
+msgstr "Não é possível desenfileirar: a fila está vazia"
+
+#: language_constants_temp.py:55
+msgid "Completed"
+msgstr "Computador de tarefas"
+
+#: language_constants_temp.py:56
+msgid "To-Do"
+msgstr "A Fazer"
+
+#: language_constants_temp.py:57
+msgid "Next"
+msgstr "Próximo"
+
+#: language_constants_temp.py:60
+msgid "Task and time allocated must be supplied"
+msgstr "A tarefa e o tempo alocado devem ser fornecidos"
+
+#: language_constants_temp.py:61
+msgid "Description must be supplied"
+msgstr "A tarefa e o tempo alocado devem ser fornecidos"
+
+#~ msgid "No translations available"
+#~ msgstr "Nenhuma tradução disponível"

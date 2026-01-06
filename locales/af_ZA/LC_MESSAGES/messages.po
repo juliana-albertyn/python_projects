@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Queue Project 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-04 13:54+0200\n"
+"POT-Creation-Date: 2026-01-06 09:34+0200\n"
 "PO-Revision-Date: 2026-01-03 11:45+0200\n"
 "Last-Translator: Juliana Albertyn <julie_albertyn@yahoo.com>\n"
 "Language-Team: Afrikaans\n"
@@ -16,71 +16,109 @@ msgstr ""
 # some phrases may contain errors or imperfect wording. Apologies for any
 # mis‑translations, and feedback is welcome to improve future versions.
 # https://www.roekeloos.co.za/woordeboeke/rekenaarwoordeboek/
-
 #: language_constants_temp.py:16
 msgid "Executing"
 msgstr "Uitvoer"
 
-#: language_constants_temp.py:21
+#: language_constants_temp.py:19
+msgid "Unsupported locale"
+msgstr "Locale word nie ondersteun nie"
+
+#: language_constants_temp.py:20
+msgid "Missing translations"
+msgstr "Vertalings nie beskikbaar nie"
+
+#: language_constants_temp.py:25
 msgid "Queue"
 msgstr "Tou"
 
-#: language_constants_temp.py:23
+#: language_constants_temp.py:26
+msgid "Count"
+msgstr "Aantal"
+
+#: language_constants_temp.py:27
 msgid "Head"
 msgstr "Kop"
 
-#: language_constants_temp.py:24
+#: language_constants_temp.py:28
 msgid "Tail"
 msgstr "Stert"
 
-#: language_constants_temp.py:27
+#: language_constants_temp.py:31
 msgid "Empty?"
 msgstr "Leeg?"
 
-#: language_constants_temp.py:28
+#: language_constants_temp.py:32
 msgid "Full?"
 msgstr "Vol?"
 
-#: language_constants_temp.py:29
+#: language_constants_temp.py:33
 msgid "Queue is empty"
 msgstr "Tou is leeg"
 
-#: language_constants_temp.py:30
+#: language_constants_temp.py:34
 msgid "Queue is full"
 msgstr "Tou is vol"
 
-#: language_constants_temp.py:34
-msgid "Peek"
-msgstr "Loer"
+#: language_constants_temp.py:37
+msgid "Priority"
+msgstr "Prioriteit"
 
-#: language_constants_temp.py:35
-msgid "Enqueue"
-msgstr "Voeg by tou"
-
-#: language_constants_temp.py:36
-msgid "Dequeue"
-msgstr "Verwyder uit tou"
+#: language_constants_temp.py:38
+msgid "High"
+msgstr "Hoog"
 
 #: language_constants_temp.py:39
-msgid "Cannot enqueue: queue is full"
-msgstr "Kan nie in tou voeg nie: tou is vol"
+msgid "Medium"
+msgstr "Medium"
 
 #: language_constants_temp.py:40
-msgid "Cannot dequeue: queue is empty"
-msgstr "Kan nie uit tou verwyder nie: tou is leeg"
+msgid "Low"
+msgstr "Laag"
 
 #: language_constants_temp.py:43
-msgid "Task and time allocated must be supplied"
-msgstr "Taak en toegewysde tyd moet verskaf word"
-
-#: language_constants_temp.py:44
-msgid "Tasks completed"
-msgstr "Take voltooi"
-
-#: language_constants_temp.py:33
 msgid "Length"
 msgstr "Lengte"
 
-#: language_constants_temp.py:22
-msgid "Count"
-msgstr "Aantal"
+#: language_constants_temp.py:44
+msgid "Peek"
+msgstr "Loer"
+
+#: language_constants_temp.py:45
+msgid "Enqueue"
+msgstr "Voeg by tou"
+
+#: language_constants_temp.py:46
+msgid "Dequeue"
+msgstr "Verwyder uit tou"
+
+#: language_constants_temp.py:49
+msgid "Cannot enqueue: queue is full"
+msgstr "Kan nie in tou voeg nie: tou is vol"
+
+#: language_constants_temp.py:50
+msgid "Cannot dequeue: queue is empty"
+msgstr "Kan nie uit tou verwyder nie: tou is leeg"
+
+#: language_constants_temp.py:55
+msgid "Completed"
+msgstr "Take voltooi"
+
+#: language_constants_temp.py:56
+msgid "To-Do"
+msgstr "Taaklys"
+
+#: language_constants_temp.py:57
+msgid "Next"
+msgstr "Volgende"
+
+#: language_constants_temp.py:60
+msgid "Task and time allocated must be supplied"
+msgstr "Taak en toegewysde tyd moet verskaf word"
+
+#: language_constants_temp.py:61
+msgid "Description must be supplied"
+msgstr "Taak en toegewysde tyd moet verskaf word"
+
+#~ msgid "No translations available"
+#~ msgstr "Geen vertalings beskikbaar nie"

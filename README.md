@@ -15,15 +15,15 @@ This repository showcases practical applications of Python, ranging from beginne
 
 | Project Name            | Source        | Description                                                                 |
 |-------------------------|---------------|-----------------------------------------------------------------------------|
-| User Configuration App  | freeCodeCamp  | Manipulates a dictionary of user configurations.                            |
-| Budget App              | freeCodeCamp  | Tracks spending in categories and generates a spend chart.                  |
-| Polygon Area Calculator | freeCodeCamp  | Defines Rectangle and Square classes,  with methods for geometric calculations and ASCII rendering.                  |
-| Queue Project           | Microsoft Copilot  | Implement a queue using a list.                            |
-| Queue with linked list  | Microsoft Copilot  | Implement a queue using a linked list.|                            |
-| Queue with doubly linked list | Microsoft Copilot | Implement a queue using a doubly linked list.|
-| Circular queue | Microsoft Copilot | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages.|
-| Demo Languages | Microsoft Copilot | Short demontration of switching between languages at runtime.|
-| Priority queue | Microsoft Copilot | Implement a priority queue using heapq. |
+| User Configuration App  | freeCodeCamp certification project  | Manipulates a dictionary of user configurations.                            |
+| Budget App              | freeCodeCamp certification project  | Tracks spending in categories and generates a spend chart.                  |
+| Polygon Area Calculator | freeCodeCamp certification project  | Defines Rectangle and Square classes,  with methods for geometric calculations and ASCII rendering.                  |
+| Queue Project           | Project suggested by Microsoft Copilot  | Implement a queue using a list.                            |
+| Queue with linked list  | Project suggested by Microsoft Copilot  | Implement a queue using a linked list.|                            |
+| Queue with doubly linked list | Project suggested by Microsoft Copilot | Implement a queue using a doubly linked list.|
+| Circular queue | Project suggested by Microsoft Copilot | Implement a queue using a fixed array with wrap around indexing, showcasing translation of messages into 5 languages.|
+| Demo Languages | Project suggested by Microsoft Copilot | Short demontration of switching between languages at runtime.|
+| Priority queue | Project suggested by Microsoft Copilot | Implement a priority queue using heapq. |
 | Round robin task scheduler | Microsoft Copilot | Simulates a CPU scheduling algorithm using a circular queue to manage tasks.
 
 ---
