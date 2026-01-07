@@ -4,7 +4,7 @@
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  
 [![Type Checking: Pylance](https://img.shields.io/badge/type%20checking-pylance-lightgrey.svg)](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)  
 [![freeCodeCamp](https://img.shields.io/badge/freeCodeCamp-certification-green.svg)](https://www.freecodecamp.org/)  
-[![Progress](https://img.shields.io/badge/Projects%20Completed-3%2F5-success.svg)](https://github.com/juliana-albertyn/python_projects)  
+[![Progress](https://img.shields.io/badge/Projects%20Completed-4%2F5-success.svg)](https://github.com/juliana-albertyn/python_projects)  
 
 A collection of Python projects completed as part of the **freeCodeCamp certification** curriculum, along with additional projects inspired and guided by **Microsoft Copilot**.  
 This repository showcases practical applications of Python, ranging from beginner exercises to more advanced, real‑world projects.
@@ -25,7 +25,8 @@ This repository showcases practical applications of Python, ranging from beginne
 | Demo Languages | Project suggested by Microsoft Copilot | Short demontration of switching between languages at runtime.|
 | Priority queue | Project suggested by Microsoft Copilot | Implement a priority queue using heapq. |
 | Round robin task scheduler | Project suggested by Microsoft Copilot | Simulates a CPU scheduling algorithm using a circular queue to manage tasks.
-| Multilingual To‑Do List Manager | Project suggested by Microsoft Copilot | Multilingual To‑Do List Manager based on a priority queue
+| Multilingual To‑Do List Manager | Project suggested by Microsoft Copilot | Multilingual To‑Do List Manager based on a priority queue |
+| Hash table | freeCodeCamp certification project | Create a hash table with own hash function
 
 ---
 
