@@ -4,7 +4,7 @@
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  
 [![Type Checking: Pylance](https://img.shields.io/badge/type%20checking-pylance-lightgrey.svg)](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)  
 [![freeCodeCamp](https://img.shields.io/badge/freeCodeCamp-certification-green.svg)](https://www.freecodecamp.org/)  
-[![Progress](https://img.shields.io/badge/Projects%20Completed-4%2F5-success.svg)](https://github.com/juliana-albertyn/python_projects)  
+[![Progress](https://img.shields.io/badge/Projects%20Completed-5%2F5-success.svg)](https://github.com/juliana-albertyn/python_projects)  
 
 A collection of Python projects completed as part of the **freeCodeCamp certification** curriculum, along with additional projects inspired and guided by **Microsoft Copilot**.  
 This repository showcases practical applications of Python, ranging from beginner exercises to more advanced, real‑world projects.
